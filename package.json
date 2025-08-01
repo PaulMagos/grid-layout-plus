@@ -4,12 +4,11 @@
   "type": "module",
   "license": "MIT",
   "author": "qmhc",
-  "packageManager": "pnpm@8.3.0",
   "scripts": {
     "build": "tsx scripts/build.ts",
-    "build:docs": "pnpm -C docs build",
-    "serve": "pnpm -C dev-server serve",
-    "serve:docs": "pnpm -C docs serve",
+    "build:docs": "npm --prefix docs run build",
+    "serve": "npm --prefix dev-server run serve",
+    "serve:docs": "npm --prefix docs run serve",
     "lint": "eslint --fix --ext .js,.ts,.tsx,.vue src/** dev-server/** docs/**",
     "lint:scripts": "eslint --fix --ext .js,.ts scripts/**",
     "lint:style": "stylelint **/*.{vue,scss} --fix",
@@ -72,58 +71,57 @@
     "@commitlint/cli": "^17.6.1",
     "@interactjs/types": "^1.10.17",
     "@types/minimist": "^1.2.2",
-    "@types/node": "^18.15.12",
+    "@types/node": "^18.19.61",
     "@types/prettier": "^2.7.2",
     "@types/prompts": "^2.4.4",
     "@types/semver": "^7.3.13",
     "@vexip-ui/commitlint-config": "^0.1.0",
-    "@vexip-ui/eslint-config": "^0.5.2",
+    "@vexip-ui/eslint-config": "^0.6.0",
     "@vexip-ui/prettier-config": "^0.1.0",
     "@vexip-ui/stylelint-config": "^0.3.0",
-    "@vitejs/plugin-vue": "^4.1.0",
-    "@vitejs/plugin-vue-jsx": "^3.0.1",
-    "@vue/test-utils": "^2.3.2",
-    "autoprefixer": "^10.4.14",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vitejs/plugin-vue-jsx": "^4.1.1",
+    "@vue/test-utils": "^2.4.6",
+    "autoprefixer": "^10.4.20",
     "conventional-changelog-cli": "^2.2.2",
-    "eslint": "^8.38.0",
+    "eslint": "^8.57.1",
     "execa": "^7.1.1",
-    "happy-dom": "^9.8.4",
+    "happy-dom": "^15.10.3",
     "husky": "^8.0.3",
     "is-ci": "^3.0.1",
     "kolorist": "^1.7.0",
-    "lint-staged": "^13.2.1",
+    "lint-staged": "^15.2.10",
     "minimist": "^1.2.8",
     "pinst": "^3.0.0",
-    "postcss": "^8.4.23",
-    "prettier": "^2.8.7",
+    "postcss": "^8.4.31",
+    "prettier": "^3.4.2",
     "prompts": "^2.4.2",
-    "sass": "^1.62.0",
-    "semver": "^7.5.0",
-    "stylelint": "^15.5.0",
+    "sass": "^1.82.0",
+    "semver": "^7.5.4",
+    "stylelint": "^16.15.0",
     "stylelint-prettier": "^3.0.0",
-    "tsx": "^3.12.6",
-    "typescript": "5.0.4",
-    "vite": "^4.3.1",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.2",
+    "vite": "^6.1.7",
     "vite-plugin-css-injected-by-js": "^3.1.0",
-    "vite-plugin-dts": "^2.3.0",
-    "vitest": "^0.30.1",
-    "vue": "^3.2.47"
+    "vite-plugin-dts": "^4.3.0",
+    "vitest": "^3.0.1",
+    "vue": "^3.5.13"
   },
   "peerDependencies": {
     "vue": "^3.0.0"
   },
-  "pnpm": {
-    "peerDependencyRules": {
-      "ignoreMissing": [
-        "@algolia/client-search",
-        "vue"
-      ],
-      "allowAny": [
-        "@csstools/*"
-      ]
-    },
-    "patchedDependencies": {
-      "conventional-changelog-angular@5.0.13": "patches/conventional-changelog-angular@5.0.13.patch"
-    }
+  "overrides": {
+    "@babel/traverse": ">=7.23.2",
+    "@babel/helpers": ">=7.26.10",
+    "braces": ">=3.0.3",
+    "cross-spawn": ">=7.0.5",
+    "get-func-name": ">=2.0.1",
+    "micromatch": ">=4.0.8",
+    "nanoid": ">=3.3.8",
+    "word-wrap": ">=1.2.4",
+    "yaml": ">=2.2.2",
+    "brace-expansion": ">=2.0.2",
+    "esbuild": ">=0.25.0"
   }
 }
