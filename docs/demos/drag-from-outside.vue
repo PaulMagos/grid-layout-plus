@@ -69,7 +69,9 @@ const drag = throttle(() => {
 
     try {
       item.wrapper.style.display = 'none'
-    } catch (e) {}
+    } catch {
+      // Ignore errors
+    }
 
     Object.assign(item.state, {
       top: mouseAt.y - parentRect.top,
@@ -123,7 +125,9 @@ function dragEnd() {
 
   try {
     item.wrapper.style.display = ''
-  } catch (e) {}
+  } catch {
+    // Ignore errors
+  }
 }
 </script>
 
