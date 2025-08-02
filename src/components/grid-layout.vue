@@ -21,7 +21,7 @@ import {
   getLayoutItem,
   moveElement,
   validateLayout,
-  cloneLayout,
+  cloneLayout as _cloneLayout,
   getAllCollisions
 } from '../helpers/common'
 import {

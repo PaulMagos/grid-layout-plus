@@ -4,7 +4,6 @@ lib
 public
 node_modules
 cache
-.husky
 
 *.js
 *.cjs
